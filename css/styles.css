@@ -279,3 +279,26 @@ header a {
 .carousel.prev .arrows button {
   pointer-events: none;
 }
+
+/* carousel timer styles */
+.time {
+  width: 0;
+  height: 5px;
+  background-color: #8a2be2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+  width: 100%;
+  animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+  to {
+    width: 0;
+  }
+}
