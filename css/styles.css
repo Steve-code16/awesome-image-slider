@@ -15,11 +15,84 @@ header {
   width: 1148px;
   max-width: 80%;
   margin: auto;
-  height: 58px;
+  height: 50px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 
 header a {
   margin-right: 48px;
+}
+
+/* carousel styles */
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -50px;
+  position: relative;
+}
+
+.carousel .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.carousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 1140px;
+  max-width: 80%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #000;
+}
+
+.carousel .list .item .content .author {
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.carousel .list .item .content .title,
+.carousel .list .item .content .subtitle {
+  font-weight: bold;
+  font-size: 5em;
+  line-height: 1.3em;
+}
+
+.carousel .list .item .content .subtitle {
+  color: #8a2be2;
+}
+
+.carousel .list .item .content .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.carousel .list .item .content button {
+  border: none;
+  background-color: #eee;
+  letter-spacing: 3px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.carousel .list .item .content button:nth-child(2) {
+  background-color: transparent;
+  color: #eee;
+  border: 1px solid #eee;
 }
