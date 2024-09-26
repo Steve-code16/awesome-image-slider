@@ -155,9 +155,33 @@ header a {
   font-weight: bold;
   font-size: large;
   transition: 0.5s;
+  z-index: 100;
 }
 
 .arrows button:hover {
   background-color: #eee;
   color: #555;
+}
+
+.carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .subtitle,
+.carousel .list .item:nth-child(1) .description,
+.carousel .list .item:nth-child(1) .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: ShowContent 0.5s 1s linear forwards;
+}
+
+@keyframes ShowContent {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
 }
