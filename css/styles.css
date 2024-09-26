@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Poppins;
   background-color: #000;
   color: #eee;
   margin: 0;
@@ -56,7 +58,7 @@ header a {
   padding-right: 30%;
   box-sizing: border-box;
   color: #fff;
-  text-shadow: 0 5px 10px #000;
+  text-shadow: 0 5px 10px #0004;
 }
 
 .carousel .list .item .content .author {
@@ -87,7 +89,7 @@ header a {
   border: none;
   background-color: #eee;
   letter-spacing: 3px;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Poppins;
   font-weight: 500;
 }
 
@@ -101,7 +103,7 @@ header a {
 .thumbnail {
   position: absolute;
   bottom: 50px;
-  left: 50px;
+  left: 50%;
   width: max-content;
   z-index: 100;
   display: flex;
@@ -141,6 +143,7 @@ header a {
   width: 300px;
   max-width: 30%;
   display: flex;
+  gap: 10px;
   align-items: center;
 }
 
@@ -178,7 +181,7 @@ header a {
   animation: showContent 0.5s 1s linear forwards;
 }
 
-@keyframes sShowContent {
+@keyframes showContent {
   to {
     opacity: 1;
     filter: blur(0);
@@ -191,10 +194,10 @@ header a {
   width: 150px;
   height: 220px;
   position: absolute;
-  left: 50px;
+  left: 50%;
   bottom: 50px;
   border-radius: 20px;
-  animation: sShowImage 0.5s linear 1 forwards;
+  animation: showImage 0.5s linear 1 forwards;
 }
 
 @keyframes showImage {
@@ -207,7 +210,7 @@ header a {
   }
 }
 
-.carousel.next .thumbnail .item:nth-child(1) {
+.carousel.next .thumbnail .item:nth-last-child(1) {
   width: 0;
   overflow: hidden;
   animation: showThumbnail 0.5s linear 1 forwards;
